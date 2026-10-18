@@ -1,0 +1,2 @@
+-- lib-rand-stub: package manifest.
+{ modules: ["rand-stub"] }
