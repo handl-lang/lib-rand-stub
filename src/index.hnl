@@ -8,7 +8,7 @@
 do {
   -- Internal list helpers
 
-  arr_len :: (xs) ~> do {
+  arr_len := (xs) ~> do {
     while { xs: xs, n: 0 } {
       [xs, n] ~> match xs {
         []: { out: n },
@@ -17,7 +17,7 @@ do {
     }
   }
 
-  arr_rev :: (xs) ~> do {
+  arr_rev := (xs) ~> do {
     while { xs: xs, acc: [] } {
       [xs, acc] ~> match xs {
         []: { out: acc },
@@ -26,7 +26,7 @@ do {
     }
   }
 
-  arr_take :: (xs, n) ~> do {
+  arr_take := (xs, n) ~> do {
     while { xs: xs, n: n, acc: [] } {
       [xs, n, acc] ~> if n <= 0 {
         { out: arr_rev(acc) }
@@ -85,7 +85,7 @@ do {
 
     -- Always returns a string of `len` copies of `charset[0]`.
     string: (len, charset) ~> do {
-      c = char.at(charset, 0)
+      c := char.at(charset, 0)
       while { n: len, acc: "" } {
         [n, acc] ~> if n <= 0 {
           { out: acc }
@@ -131,7 +131,7 @@ do {
     seeded_shuffle: (seed, xs) ~> arr_rev(xs),
 
     seeded_string: (seed, len, charset) ~> do {
-      c = char.at(charset, 0)
+      c := char.at(charset, 0)
       while { n: len, acc: "" } {
         [n, acc] ~> if n <= 0 {
           { out: acc }
