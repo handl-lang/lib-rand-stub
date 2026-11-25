@@ -8,7 +8,7 @@ Stub backend for the `rand` ports. Pure `.hnl`.
 | --- | --- |
 | `src/index.hnl` | the stub implementation |
 | `pkg.hnl` | manifest — `modules: ["rand-stub"]` |
-| `scripts/hnl-gate.sh`, `ci.sh` | the gate / bupha entry |
+| `scripts/hnl-gate.sh`, `workflows/gate.yaml` | the gate / bupha entry |
 
 ## Contract
 
