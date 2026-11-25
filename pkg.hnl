@@ -1,2 +1,2 @@
 -- lib-rand-stub: package manifest.
-{ modules: ["rand-stub"], description: "Stub backend for the rand ports.", license: "MIT" }
+{ modules: ["rand-stub"], name: "rand-stub", description: "Stub backend for the rand ports.", license: "MIT" }
