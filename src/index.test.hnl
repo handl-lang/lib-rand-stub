@@ -4,33 +4,54 @@
 from "./index" import * as m
 
 test_int := assert m.int(10) == 4
+
 test_float := assert m.float(1) == 0.5
+
 test_bool := assert m.bool() == true
+
 test_pick := assert m.pick([7, 8, 9]) == 7
+
 test_weighted_pick := assert m.weighted_pick([1, 1], [9, 8]) == 9
 
 test_choice := assert m.choice([1, 2, 3], 2) == [2, 1]
+
 test_sample := assert m.sample([1, 2, 3], 2) == [1, 2]
+
 test_sample_over := assert m.sample([1, 2], 5) == [1, 2]
+
 test_shuffle := assert m.shuffle([1, 2, 3]) == [3, 2, 1]
 
 test_bytes := assert m.bytes(3) == [4, 4, 4]
+
 test_bytes_zero := assert m.bytes(0) == []
+
 test_string := assert m.string(3, "abc") == "aaa"
+
 test_string_empty := assert m.string(0, "abc") == ""
 
 test_gauss := assert m.gauss(5, 1) == 5
+
 test_exponential := assert m.exponential(2) == 0.0
+
 test_poisson := assert m.poisson(3) == 0
+
 test_binomial := assert m.binomial(10, 0.5) == 0
 
 -- seeded variants behave identically to the unseeded stub
 test_seeded_int := assert m.seeded_int(42, 10) == 4
+
 test_seeded_float := assert m.seeded_float(42, 1) == 0.5
+
 test_seeded_bool := assert m.seeded_bool(42) == true
+
 test_seeded_pick := assert m.seeded_pick(42, [7, 8]) == 7
+
 test_seeded_choice := assert m.seeded_choice(42, [1, 2, 3], 2) == [2, 1]
+
 test_seeded_sample := assert m.seeded_sample(42, [1, 2, 3], 2) == [1, 2]
+
 test_seeded_shuffle := assert m.seeded_shuffle(42, [1, 2, 3]) == [3, 2, 1]
+
 test_seeded_string := assert m.seeded_string(42, 3, "abc") == "aaa"
+
 test_seeded_gauss := assert m.seeded_gauss(42, 5, 1) == 5
